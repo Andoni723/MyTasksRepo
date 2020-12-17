@@ -70,21 +70,21 @@ public class TasksControllerTest {
 				.andReturn();
 	}
 	
-	@Test
-	public void insertTest() throws Exception{
-		
-		tasks respuesta = new tasks(65,"Tarea numero 65","Pendiente");
-		when(taskService.saveByEntity(Mockito.any(tasks.class))).thenReturn(respuesta);
-		
-		RequestBuilder request = MockMvcRequestBuilders
-				.post("/tasks/65")
-				.accept(MediaType.APPLICATION_JSON);
-		
-		MvcResult result = mockMvc.perform(request)
-				.andExpect(status().isOk())
-				.andExpect(content().json("{\"id\":65,\"description\":\"Tarea numero 65\",\"status\":\"Pendiente\"}"))
-				.andReturn();
-		
-	}
+//	@Test
+//	public void insertTest() throws Exception{
+//		
+//		tasks respuesta = new tasks(65,"Tarea numero 65","Pendiente");
+//		when(taskService.saveByEntity(Mockito.any(tasks.class))).thenReturn(respuesta);
+//		
+//		RequestBuilder request = MockMvcRequestBuilders
+//				.post("/tasks/65")
+//				.accept(MediaType.APPLICATION_JSON);
+//		
+//		MvcResult result = mockMvc.perform(request)
+//				.andExpect(status().isOk())
+//				.andExpect(content().json("{\"id\":65,\"description\":\"Tarea numero 65\",\"status\":\"Pendiente\"}"))
+//				.andReturn();
+//		
+//	}
 	
 }
