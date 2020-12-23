@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.everisdarmytasksms.Entity.tasks;
 import com.example.everisdarmytasksms.Service.TaskService;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 public class TaskController {
 
