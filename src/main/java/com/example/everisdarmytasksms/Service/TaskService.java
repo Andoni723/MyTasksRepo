@@ -43,7 +43,7 @@ public class TaskService {
 			return taskRepository.save(task);
 		}
 		
-		public String update(tasks taskUpdated) {
+		public void update(tasks taskUpdated) {
 			int id = taskUpdated.getId();
 			if(taskRepository.findById(id).isPresent()) {
 				tasks taskToUpdate = new tasks();
@@ -53,7 +53,6 @@ public class TaskService {
 				System.out.println(taskToUpdate.toString());
 				taskRepository.save(taskToUpdate);
 			}
-			return "Costumer "+ taskUpdated.toString() +" modificado.";
 		}
 		
 }

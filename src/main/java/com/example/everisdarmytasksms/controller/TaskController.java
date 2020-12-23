@@ -51,8 +51,8 @@ public class TaskController {
 	}
 	
 	@RequestMapping(value = "/tasks/update", method = RequestMethod.POST, consumes = "application/json")
-	public String update(@RequestBody tasks taskUpdated) {
-		return taskService.update(taskUpdated);
+	public void update(@RequestBody tasks taskUpdated) {
+		taskService.update(taskUpdated);
 	}
 	
 }
