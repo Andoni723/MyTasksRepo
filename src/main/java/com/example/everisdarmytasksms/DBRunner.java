@@ -22,7 +22,8 @@ public class DBRunner implements CommandLineRunner{
 	public void run (String... args) throws Exception {
 		
 		logger.info("initializing tasks");
-		
+
+		//Tarea nueva
 		var t1 = new tasks("Tarea numero 75","Pendiente");
 		taskRepository.save(t1);
 		
