@@ -22,11 +22,3 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean install
-
-    - name: Deploy to Azure Web App
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: 'everis-darmytasks-ms'
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f7bd5509a41046bcb5bd627574bf4543 }}
-        package: '${{ github.workspace }}/target/*.jar'
